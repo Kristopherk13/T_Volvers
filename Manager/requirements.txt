@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+aioredis
+aioredis[hiredis]
+sqlalchemy
+psycopg2
+alembic 

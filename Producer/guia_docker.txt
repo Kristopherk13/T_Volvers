@@ -1,0 +1,16 @@
+para instalar docker debera ir al directorio de la aplicacion y ejecutar
+type nul > Dockerfile 
+    y copiar en el archivo limpio
+
+FROM node:18-alpine
+WORKDIR /app
+COPY requirements.txt requirements.txt
+RUN pip install -r requirements.txt
+
+COPY device.py device.py
+COPY redisCon.py redisCon.py
+
+CMD [ "python", "redisCon.py"]
+
+se compila
+docker build -t producer .
