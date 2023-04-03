@@ -1,3 +1,21 @@
+Diagrama de arquitectura se encuentra en formato .png
+    .\Diagrama de arquitectura.png
+
+Archivo .csv se crea en el directorio consumer para guardar las mediciones.
+    .\Consumer\measure.csv
+
+Los directorios se encuentran organizados de la siguiente manera:
+    Consumer
+        Microservicio que consulta los eventos en el redis.
+    Consumer_event
+        Microservicio que consulta los eventos de diferente manera, detecta overflow cada 50 mediciones.
+    manager
+        Se encuentra alojado el FASTAPI el cual contiene el CRUD para la administración de las mediciones.
+    Produces
+        Se encuentra alojado el dispositivo que genera mediciones aleatorias y las reporta al redis.
+
+Guia para ejecucion de codigo:
+
 Activar entorno virtual de \manager
     .\venv-manager\Scripts\activate
 
